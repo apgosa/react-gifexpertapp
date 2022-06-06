@@ -6,8 +6,6 @@ export const getGifs = async ( category ) => {
     const resp = await fetch(url);
     const { data } = await resp.json();
 
-    //console.log(data);
-
     const gifs = data.map((img) => {
       return {
         id: img.id,
@@ -17,6 +15,4 @@ export const getGifs = async ( category ) => {
     });
 
     return gifs;
-    //console.log(gifs);
-    //setImages(gif);
   }
